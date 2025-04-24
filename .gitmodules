@@ -1,3 +1,9 @@
 [submodule "packages/nomad-FAIR"]
 	path = packages/nomad-FAIR
 	url = https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-FAIR.git
+[submodule "packages/nomad-material-processing"]
+	path = packages/nomad-material-processing
+	url = https://github.com/lankovas/nomad-material-processing.git
+[submodule "nomad-material-processing"]
+	path = nomad-material-processing
+	url = https://github.com/lankovas/nomad-material-processing.git
