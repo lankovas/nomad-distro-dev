@@ -1,0 +1,91 @@
+definitions:
+  name: MRO005 archive schema
+  sections:
+    MyProcessColumn:
+      base_sections: 
+        - nomad.datamodel.metainfo.eln.BasicEln
+        - nomad.parsing.tabular.TableData
+      m_annotations:
+        plot:
+          - label: Reaction Process
+            x: process_time
+            y: 
+              - Ca(NO3)2_Ce(NO3)3 
+              - Conductivity
+              - pH
+              - Stir Speed
+              - Temperature
+      quantities:
+        data_file:
+          type: str
+          m_annotations:
+            browser:
+              adaptor: RawFileAdaptor
+            eln:
+              component: FileEditQuantity
+            tabular_parser:
+              # sep: ',' # only needed for csv files  
+              comment: '#'
+              mode: column
+        process_time:
+          type: np.float64
+          shape: ['*']
+          unit: s
+          m_annotations:
+            tabular:
+              name: Measured values/Rel. Time (in s)
+        Ca(NO3)2_Ce(NO3)3:
+          type: np.float64
+          shape: ['*']
+          unit: ml
+          m_annotations:
+            tabular:
+              name: Measured values/Ca(NO3)2 Ce(NO3)3
+            plot:
+              label: Ca(NO3)2 Ce(NO3)3
+              x: process_time
+              y: Ca(NO3)2_Ce(NO3)3
+        Conductivity:
+          type: np.float64
+          shape: ['*']
+          unit: ms/cm
+          m_annotations:
+            tabular:
+              name: Measured values/Leitfähigkeit
+            plot:
+              label: Conductivity
+              x: process_time
+              y: Conductivity
+        pH:
+          type: np.float64
+          shape: ['*']
+          unit: None
+          m_annotations:
+            tabular:
+              name: Measured values/pH-Druck
+            plot:
+              label: pH
+              x: process_time
+              y: pH
+        Stir_Speed:
+          type: np.float64
+          shape: ['*']
+          unit: rpm
+          m_annotations:
+            tabular:
+              name: Measured values/R
+            plot:
+              label: Stir Speed
+              x: process_time
+              y: Stir_Speed
+        Temperature:
+          type: np.float64
+          shape: ['*']
+          unit: celsius
+          m_annotations:
+            tabular:
+              name: Measured values/Tr
+            plot:
+              label: Temperature
+              x: process_time
+              y: temperature
