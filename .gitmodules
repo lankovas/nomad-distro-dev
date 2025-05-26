@@ -7,3 +7,9 @@
 [submodule "nomad-material-processing"]
 	path = nomad-material-processing
 	url = https://github.com/lankovas/nomad-material-processing.git
+[submodule "nomad-cau-plugin"]
+	path = nomad-cau-plugin
+	url = git@github.com:CAU-Kiel/nomad-cau-plugin.git
+[submodule "packages/nomad-cau-plugin"]
+	path = packages/nomad-cau-plugin
+	url = git@github.com:CAU-Kiel/nomad-cau-plugin.git
